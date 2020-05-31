@@ -1,9 +1,7 @@
 from bisect import bisect_left, bisect_right
 
 '''
- this class is published at https://code.activestate.com/recipes/577197-sortedcollection/ and made available for community use 
- Kirsten Kissmeyer - added def find_index_item_gt(self, k):
-	'Return index of first item with a key > k.  Raise ValueError if not found'
+ this class is published at https://code.activestate.com/recipes/577197-sortedcolle
 ''' 
 class SortedCollection(object):
     '''Sequence sorted by a key function.
@@ -197,9 +195,4 @@ class SortedCollection(object):
             return self._items[i]
         raise ValueError('No item found with key above: %r' % (k,))
 
-    def find_index_item_gt(self, k):
-        'Return index of first item with a key > k and the item.  Raise ValueError if not found'
-        i = bisect_right(self._keys, k)
-        if i != len(self):
-            return i,self._items[i] 
-        raise ValueError('No item found with key above: %r' % (k,))
+  
